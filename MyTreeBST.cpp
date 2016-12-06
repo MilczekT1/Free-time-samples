@@ -5,7 +5,7 @@ using namespace std;
  *  1) add null node to avoid  null assignments
  *  2) exceptions
  *  3) what about repeated keys?  -> lists in nodes?
- */
+ */ //not important
 
 class TreeBST {
 
