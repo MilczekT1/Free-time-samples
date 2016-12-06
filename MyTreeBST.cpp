@@ -3,9 +3,8 @@ using namespace std;
 
 /*
  *  1) add null node to avoid  null assignments
- *  2) exceptions
- *  3) what about repeated keys?  -> lists in nodes?
- */ //not important
+ *  2) what about repeated keys?  -> lists in nodes?
+ */
 
 class TreeBST {
 
@@ -105,12 +104,12 @@ private:
     void addRootNode(int keyToAdd){
         try{
             root = new Node(keyToAdd);
-            setTreeSize(treeSize + 1);
-            isEmpty = false;
         }
         catch(exception exc){
-            ;
+            delete root;
         }
+        setTreeSize(treeSize + 1);
+        isEmpty = false;
     }
 
     void createNode(int keyToAdd){
