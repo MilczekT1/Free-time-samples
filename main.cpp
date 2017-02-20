@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "Kolejka.cpp"
+#include "MyQueue.cpp"
 #include "MyStack.cpp"
 #include "MyTreeBST.cpp"
 #include "MyTreeRB.cpp"
