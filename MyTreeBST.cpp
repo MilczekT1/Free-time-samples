@@ -1,10 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/*
- *  1) add null node to avoid  null assignments
- *  2) what about repeated keys?  -> lists in nodes?
- */
 
 class TreeBST {
 
@@ -21,8 +17,7 @@ private:
     unsigned int treeSize;
     bool isEmpty;
     Node *node, *nullNode;;
-    
-//                          Prywatne metody
+
     void addNodeToTree(Node *father, int keyToAdd){
         if (nodeExist(father)){
             if (keyToAdd < father->key){

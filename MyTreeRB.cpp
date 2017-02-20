@@ -6,14 +6,8 @@ using namespace std;
 
 /*  Every node is black or red
  *  Every live is black
- *  Red node has 2 black sons
+ *  Red node can have 2 black sons
  *  Every simple route from node to live contain the same amount of black nodes
- */
-
-/*
- *  TODO:
- *  1) exceptions
- *  2) destructor
  */
 
 class TreeRB {

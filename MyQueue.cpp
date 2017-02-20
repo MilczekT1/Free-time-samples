@@ -38,9 +38,6 @@ public:
                 ;
             }
         }
-        else{
-            ;
-        }
     }
 
     void push_back(int data){
@@ -114,7 +111,6 @@ public:
     }
 
     int at(int index){
-            //TODO: wykonaj czytelniej funkcje at
         if (index >0 && index < size){
             pointer = first;
             for (int i=0; i<=index;i++){
@@ -145,12 +141,12 @@ public:
             return NULL;
         }
     }
-    /*  
-        TODO:
-        insertAt(index);
-        eraseAt(index);
-     */
+
     unsigned int getSize(){
         return size;
     }
 };
+//TODO: make  method "at(index)" more clear
+//add methods:
+//insertAt(index);
+//eraseAt(index);
