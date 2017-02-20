@@ -4,6 +4,8 @@ using namespace std;
 #define RED -1
 #define BLACK 1
 
+// based on: http://eduinf.waw.pl/inf/alg/001_search/0121.php
+
 /*  Every node is black or red
  *  Every live is black
  *  Red node can have 2 black sons
@@ -170,8 +172,6 @@ private:
             }
             else{
                 delete succesor;
-                //setAdditionalBlackTo(succesor->up->left); //at guardian
-                //repairAfterDeletion(succesor->up->left);
             }
         }
     }
@@ -228,7 +228,6 @@ private:
                         }
 
                         setColor(startNode->up->up->right, BLACK);
-                        //#
                         if (isRoot(startNode->up->up)){
                             setColor(startNode->up->up, BLACK);
                         }
@@ -300,7 +299,7 @@ private:
 
     void rotate_Left(Node *nodeToRotate){
         Node *helpNode;
-        if (nodeExist(nodeToRotate->up)){//its not root
+        if (nodeExist(nodeToRotate->up)){ // its not root
             if(isLeftSon(nodeToRotate)){
                 nodeToRotate->up->left = nodeToRotate->right;
             }
