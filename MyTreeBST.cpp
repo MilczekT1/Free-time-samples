@@ -121,7 +121,7 @@ private:
         }
     }
 
-    bool nodeExist(Node *node){
+    inline bool nodeExist(Node *node){
         if (node){
             return true;
         }
@@ -130,7 +130,7 @@ private:
         }
     }
 
-    bool nodeHasLeftSon(Node *nodeToCheck){
+    inline bool nodeHasLeftSon(Node *nodeToCheck){
         if (nodeToCheck->left){
             return true;
         }
@@ -139,7 +139,7 @@ private:
         }
     }
 
-    bool nodeHasRightSon(Node *nodeToCheck){
+    inline bool nodeHasRightSon(Node *nodeToCheck){
         if (nodeToCheck->right){
             return true;
         }
@@ -148,7 +148,7 @@ private:
         }
     }
 
-    bool nodeHasNoSons(Node *nodeToCheck){
+    inline bool nodeHasNoSons(Node *nodeToCheck){
         if (nodeHasLeftSon(nodeToCheck) || nodeHasRightSon(nodeToCheck)){
             return false;
         }
@@ -175,7 +175,7 @@ private:
         }
     }
 
-    bool nodeHasTwoSons(Node* node){
+    inline bool nodeHasTwoSons(Node* node){
         if (nodeHasLeftSon(node) && nodeHasRightSon(node)){
             return true;
         }
@@ -184,7 +184,7 @@ private:
         }
     }
 
-    bool isLeftSon(Node* node){
+    inline bool isLeftSon(Node* node){
         if (node == node->up->left){
             return true;
         }
@@ -193,7 +193,7 @@ private:
         }
     }
 
-    bool isRightSon(Node* node){
+    inline bool isRightSon(Node* node){
         if (node == node->up->right){
             return true;
         }
@@ -202,21 +202,21 @@ private:
         }
     }
 
-    void linkAsLeftSon(Node *father){
+    inline void linkAsLeftSon(Node *father){
         father->left = node;
         node->up = father;
     }
 
-    void linkAsRightSon(Node *father){
+    inline void linkAsRightSon(Node *father){
         father->right = node;
         node->up = father;
     }
 
-    void copyDataFromTo(Node *source, Node *direction){
+    inline void copyDataFromTo(Node *source, Node *direction){
         direction->key = getNodeKey(source);
     }
 
-    void setTreeSize(unsigned int newSize){
+    inline void setTreeSize(unsigned int newSize){
         treeSize = newSize;
     }
 
@@ -362,12 +362,12 @@ public:
         }
     }
 
-    void writeKeyWithComma(Node *node){
+    inline void writeKeyWithComma(Node *node){
         int number = getNodeKey(node);
         cout<<number<<",";
     }
 
-    int getNodeKey(Node *node){
+    inline int getNodeKey(Node *node){
         return node->key;
     }
 
